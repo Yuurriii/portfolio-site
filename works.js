@@ -171,19 +171,19 @@ fetch("works.csv")
         var icon = document.getElementById("weather-icon");
 
         if (code === 0) {
-            icon.textContent = "☀";
+            icon.textContent = "😻";晴れ
             document.body.className = "weather-sunny";
 
         } else if (code >= 1 && code <= 3) {
-            icon.textContent = "☁";
+            icon.textContent = "✾";
             document.body.className = "weather-cloudy";
 
         } else if (code >= 51 && code <= 67) {
-            icon.textContent = "☂";
+            icon.textContent = "✾";　　雨
             document.body.className = "weather-rainy";
 
         } else {
-            icon.textContent = "☁";
+            icon.textContent = "☁";　くもり
             document.body.className = "weather-cloudy";
         }
     }
