@@ -1,7 +1,9 @@
 
         body{
-            background: #fdeef5;
+            background: #FCF8F4;
+            transition: background-color 1s;
             color: #000000;
+            font-family: "Noto Sans JP", sans-serif;
         }
         a{
             color: inherit;
@@ -14,9 +16,11 @@
             width: 100%;
             position: fixed;
             padding: 0px 30px;
-            background: #ffffff;
+            background: #FCF8F4;
             height:75px;
             top:0;
+            z-index:1000;
+            box-sizing:border-box;
         }
        
        nav{
@@ -46,7 +50,9 @@
        #works-grid{
             display:grid;
             grid-template-columns: repeat(3,1fr);
-            gap:30px;
+            gap:20px;
+            max-width:900px;
+            margin:0auto;
        }
 
     .work-card img{
@@ -95,4 +101,428 @@
         font-size:10px;
         margin: top 10px;
     }
-       
+    
+           /*スマートフォン*/
+       @media screen and (max-width: 600px){
+            #top{
+                padding-top:80px;
+            }  
+
+            #top img {
+                width:100%;
+            } 
+
+            #works-grid{
+                grid-template-columns:1fr;
+            } 
+
+            .works-controls{
+                 flex-direction:column;
+            }
+        }
+
+
+        /*天気*/
+        #weather-icon{
+            font-size:60px;
+            margin: 0;
+        }
+
+        /* 晴れ */
+body.weather-sunny {
+    background-color: #FCF8F4;
+}
+
+body.weather-sunny .site-header {
+    background-color: #EBD5DC;
+}
+
+/* 曇り */
+body.weather-cloudy {
+    background-color: #FCF8F4 ;
+}
+
+body.weather-cloudy .site-header {
+    background-color: #E4E4E8;
+}
+
+/* 雨 */
+body.weather-rainy {
+    background-color:  #FCF8F4;
+}
+
+body.weather-rainy .site-header {
+    background-color:#C5DCEE;
+}
+        
+/* Topだけ背景色を変える */
+#top {
+    background-color: #F6E9ED ;
+    padding-top: 75px;
+    padding-bottom: 100px;
+}
+
+#about {
+    padding: 60px 30px;
+    overflow-wrap: break-word;
+    line-height: 1.8;
+}
+
+
+
+/* マウスを乗せると揺れる */
+nav a:hover {
+    animation: gentle-swing 0.5s ease-in-out;
+    color: #C58A9B;
+}
+
+@keyframes gentle-swing {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-5deg); }
+    50%  { transform: rotate(5deg); }
+    75%  { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+/* マウスを乗せると揺れる */
+nav a:hover {
+    animation: gentle-swing 0.5s ease-in-out;
+    color: #C58A9B;
+}
+
+@keyframes gentle-swing {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-5deg); }
+    50%  { transform: rotate(5deg); }
+    75%  { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+
+header nav a:hover {
+    animation: swing 0.5s ease-in-out;
+    color: #C58A9B;
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+    75% {
+        transform: rotate(-4deg);
+    }
+}
+
+
+/* ナビゲーションのアニメーション */
+header nav a {
+    display: inline-block;
+    transform-origin: center;
+}
+
+header nav a:hover {
+    animation: gentle-swing 0.5s ease-in-out;
+    color: #C58A9B;
+}
+
+@keyframes gentle-swing {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+}
+
+
+
+/* ボタンと作品カードをかわいくする */
+button,
+.work-link {
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.work-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px #e8cbd3;
+}
+
+/* 作品カードのアニメーション */
+.work-card {
+    border: 1px solid #E8D9D9;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #FFFCFA;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #eadde0;
+    opacity: 1;
+}
+
+
+
+
+
+
+/* 作品画像 */
+.work-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* 画像にマウスを乗せると少し拡大 */
+.work-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* 作品タイトル */
+.work-card h4 {
+    margin: 18px 16px 8px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+/* 作品の説明 */
+.work-card p {
+    margin: 0 16px 18px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #817777;
+}
+
+
+
+/* 見出しの下にピンクの線 */
+section h3 {
+    display: table;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #E8C6D0;
+}
+
+
+
+/* タイトルがふわっと現れる */
+#top h1 {
+    opacity: 0;
+    animation: fade-up 1.2s ease-out forwards;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* トップの写真を小さくする */
+#top img {
+    width: 85%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+
+/* Aboutのプロフィールを読みやすく */
+.about p {
+    font-size: 16px;
+    line-height: 2;
+    overflow-wrap: break-word;
+}
+
+.about strong {
+    font-weight: 600;
+    color: #8F6874;
+}
+
+
+/* ===== トップページ ===== */
+/* ===== トップページ ===== */
+#top {
+    background-color: #F6E9ED;
+    padding: 145px 6% 70px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-margin-top: 75px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* 左側のタイトル */
+.hero-text {
+    flex: 1;
+}
+
+.hero-label {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: #A67C88;
+    margin-bottom: 18px;
+}
+
+#top h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(36px, 4vw, 62px);
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    animation: fade-up 1s ease-out both;
+}
+
+#top h1 span {
+    display: block;
+    font-size: 0.72em;
+    font-style: italic;
+    color: #B78395;
+    margin-top: 5px;
+}
+
+.hero-description {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #77686C;
+    margin-bottom: 28px;
+}
+
+/* Worksへのリンク */
+.hero-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #D8AFBC;
+    border-radius: 30px;
+    color: #946C7A;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.hero-link:hover {
+    background: #FFFCFA;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px #e8cbd3;
+}
+
+/* 右側の写真 */
+.hero-image {
+    flex: 1;
+    min-width: 0;
+}
+
+#top .hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    height: 360px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 16px;
+}
+
+/* ふわっと表示 */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* スマートフォン */
+@media screen and (max-width: 700px) {
+    #top {
+        padding: 110px 24px 50px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    #top .hero-image img {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* スマートフォン */
+@media screen and (max-width: 600px) {
+    #top {
+        padding: 110px 20px 60px;
+        min-height: auto;
+    }
+
+    #top .hero-content img {
+        width: 100%;
+        height:220px;
+        object-fit:cover;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+}
+
+.hero-image {
+    animation: fadeInUp 1.2s ease-out both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

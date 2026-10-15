@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang ="ja">
     <!DOCTYPE html>
-<html lang ="ja">
+    <html lang ="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Yuri Iijima</title>
-        <link rel="stylesheet"href="style.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     </head>
     <body>
          <header>
@@ -13,26 +15,53 @@
            <nav>
             <a href="#about">About</a>
             <a href="#works">Works</a>
+            <a href="#my-vision">My Vision</a>
+             <a href="#contact">Contact</a>
            </nav>
          </header>
 
      <main>
-        <section id="top">
-              <img src="./media/フリー素材.jpeg"width=100%>
-              <h1>
-                Yuri Iijima<br>
-                Portfolio
-               </h1>    
-        </section>
-        <section id="about">
+        
+        
+            
+                
+  <section id="top">
+       <div class="hero-content">
+
+           <div class="hero-text">
+               <p class="hero-label">DESIGN PORTFOLIO</p>
+
+               <h1>
+                   Yuri Iijima
+                   <span>Portfolio</span>
+               </h1>
+               <a href="#works" class="hero-link">
+                   Explore my works <span>↓</span>
+               </a>
+           </div>
+
+           <div class="hero-image">
+               <img src="./media/cafe.jpg" alt="Portfolio cover">
+             
+
+        </div>
+
+    <p id="weather-icon"></p>
+</section>
+
+<section class="about" id="about">
             <h3>About</h3>
             <p>
             飯島友里<br>
             東京都市大学デザイン・データ科学部
             </p>
             <p>
-            専門：UI/UX、インタラクションデザイン<br>
-            スキル：Figma / HTML / Python / Data Analysis
+<p>
+    <strong>Interests</strong>：UI/UX、インタラクションデザイン<br>
+    <strong>Skills</strong>：Figma、HTML、Python、Data Analysis<br>
+    <strong>Experience</strong>：留学、Webサイト制作、プロダクトデザイン、ダンスの振付<br>
+    <strong>Outside Interests</strong>：ダンス、カフェ巡り、旅行
+</p>
             </p>
         </section>
         <section id="works" class="works">
@@ -49,8 +78,12 @@
             </div>
             <div id="works-grid"></div>
         </section>
-        <section>
-            <h3>Skill</h3>
+        <section id="my-vision">
+            <h3>My Vision</h3>
+            <h4>Designing experiences that make people happy</h4>
+            <p>
+                人の心を動かし、幸せを感じられる体験があふれる社会をつくる。
+            </p>
         </section>
         <section>
             <h3>Contact</h3>
@@ -63,3 +96,5 @@
         <script src="works.js"></script>
     </body>       
 </html>
+
+
